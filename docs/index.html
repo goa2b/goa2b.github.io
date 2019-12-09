@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title> - Technical Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://jigyasa30.github.io/green-ocean/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/green-ocean/css/style.min.d0149e46d37ed09a60f55899204505f757aeb152bb817cdb02a1a2bf5728bb6b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-list'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/green-ocean/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs active">
+      <a href="/green-ocean/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://jigyasa30.github.io/green-ocean"><img alt="Logo" src="/green-ocean/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://jigyasa30.github.io/green-ocean"><img alt="Logo" src="/green-ocean/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/green-ocean/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs active">
+      <a href="/green-ocean/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://jigyasa30.github.io/green-ocean/docs/installation/requirements/">Requirements</a>
+    </li>
+    
+    <li class="">
+      <a href="https://jigyasa30.github.io/green-ocean/docs/installation/features/">Features</a>
+    </li>
+    
+    <li class="">
+      <a href="https://jigyasa30.github.io/green-ocean/docs/administration/configuration/">Configuration</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+
+<span class="overview">Overview</span>
+<h1 class="title"></h1>
+<div class="content">
+  <h1 id="getting-started">Getting started</h1>
+<p>This guide will help you get started and acquainted with Grafana. It assumes you have a working Grafana server up and running. If not please read the <a href="https://grafana.com/docs/installation/">installation guide</a>.</p>
+<h2 id="logging-in-for-the-first-time">Logging in for the first time</h2>
+<p>To run Grafana open your browser and go to http://localhost:3000/. 3000 is the default HTTP port that Grafana listens to if you haven’t <a href="https://grafana.com/docs/installation/configuration/#http-port">configured a different port</a>.</p>
+<p>There you will see the login page. Default username is admin and default password is admin. When you log in for the first time you will be asked to change your password. We strongly encourage you to follow Grafana’s best practices and change the default administrator password. You can later go to user preferences and change your user name.</p>
+<h2 id="how-to-add-a-data-source">How to add a data source</h2>
+<p><a href="https://grafana.com/docs/img/docs/v52/sidemenu-datasource.png"><img src="https://grafana.com/docs/img/docs/v52/sidemenu-datasource.png" alt="img"><img src="https://grafana.com/docs/assets/img/zoom.png" alt="img"></a></p>
+<p>Before you create your first dashboard you need to add your data source.</p>
+<p>First move your cursor to the cog on the side menu which will show you the configuration menu. If the side menu is not visible click the Grafana icon in the upper left corner. The first item on the configuration menu is data sources, click on that and you’ll be taken to the data sources page where you can add and edit data sources. You can also simply click the cog.</p>
+<p>Click Add data source and you will come to the settings page of your new data source.</p>
+<p><a href="https://grafana.com/docs/img/docs/v52/add-datasource.png"><img src="https://grafana.com/docs/img/docs/v52/add-datasource.png" alt="img"><img src="https://grafana.com/docs/assets/img/zoom.png" alt="img"></a></p>
+<p>First, give the data source a Name and then select which Type of data source you’ll want to create, see <a href="https://grafana.com/docs/features/datasources/#supported-data-sources/">Supported data sources</a> for more information and how to configure your data source.</p>
+<p><a href="https://grafana.com/docs/img/docs/v52/datasource-settings.png"><img src="https://grafana.com/docs/img/docs/v52/datasource-settings.png" alt="img"><img src="https://grafana.com/docs/assets/img/zoom.png" alt="img"></a></p>
+<p>After you have configured your data source you are ready to save and test.</p>
+<h2 id="beginner-guides">Beginner guides</h2>
+<p>Watch the 10min <a href="https://www.youtube.com/watch?v=sKNZMtoSHN4&amp;index=7&amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2">beginners guide to building dashboards</a> to get a quick intro to setting up Dashboards and Panels.</p>
+<h2 id="basic-concepts">Basic concepts</h2>
+<p>Read the <a href="https://grafana.com/docs/guides/basic_concepts">Basic Concepts</a> document to get a crash course in key Grafana concepts.</p>
+<h3 id="top-header">Top header</h3>
+<p>Let’s start with creating a new Dashboard. You can find the new Dashboard link on the right side of the Dashboard picker. You now have a blank Dashboard.</p>
+<p><img src="https://grafana.com/docs/img/docs/v50/top_nav_annotated.png" alt="img"></p>
+
+</div>
+
+
+<div class="summary mb-2">
+  
+  <h2 class="title-summary"><a href="https://jigyasa30.github.io/green-ocean/docs/administration/">Administration</a></h2>
+  <p></p>
+</div>
+
+
+<div class="summary mb-2">
+  
+  <h2 class="title-summary"><a href="https://jigyasa30.github.io/green-ocean/docs/installation/">Installation</a></h2>
+  <p></p>
+</div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/green-ocean/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>

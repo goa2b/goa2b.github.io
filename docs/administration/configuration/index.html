@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Configuration - Technical Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://jigyasa30.github.io/green-ocean/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/green-ocean/css/style.min.d0149e46d37ed09a60f55899204505f757aeb152bb817cdb02a1a2bf5728bb6b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/green-ocean/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/green-ocean/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://jigyasa30.github.io/green-ocean"><img alt="Logo" src="/green-ocean/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://jigyasa30.github.io/green-ocean"><img alt="Logo" src="/green-ocean/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/green-ocean/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/green-ocean/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://jigyasa30.github.io/green-ocean/docs/installation/requirements/">Requirements</a>
+    </li>
+    
+    <li class="">
+      <a href="https://jigyasa30.github.io/green-ocean/docs/installation/features/">Features</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://jigyasa30.github.io/green-ocean/docs/administration/configuration/">Configuration</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Configuration</h1>
+<div class="content ">
+  <p>The Grafana back-end has a number of configuration options that can be specified in a <code>.ini</code> configuration file or specified using environment variables.</p>
+<blockquote>
+<p><strong>Note.</strong> Grafana needs to be restarted for any configuration changes to take effect.</p>
+</blockquote>
+<h2 id="comments-in-ini-files">Comments in .ini Files</h2>
+<p>Semicolons (the <code>;</code> char) are the standard way to comment out lines in a <code>.ini</code> file.</p>
+<p>A common problem is forgetting to uncomment a line in the <code>custom.ini</code> (or <code>grafana.ini</code>) file which causes the configuration option to be ignored.</p>
+<h2 id="config-file-locations">Config file locations</h2>
+<ul>
+<li>Default configuration from <code>$WORKING_DIR/conf/defaults.ini</code></li>
+<li>Custom configuration from <code>$WORKING_DIR/conf/custom.ini</code></li>
+<li>The custom configuration file path can be overridden using the <code>--config</code> parameter</li>
+</ul>
+<blockquote>
+<p><strong>Note.</strong> If you have installed Grafana using the <code>deb</code> or <code>rpm</code> packages, then your configuration file is located at <code>/etc/grafana/grafana.ini</code> and a separate <code>custom.ini</code> is not used. This path is specified in the Grafana init.d script using <code>--config</code> file parameter.</p>
+</blockquote>
+<p><strong>macOS:</strong> By default, the configuration file is located at <code>/usr/local/etc/grafana/grafana.ini</code>.</p>
+<h2 id="using-environment-variables">Using environment variables</h2>
+<p>All options in the configuration file (listed below) can be overridden using environment variables using the syntax:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">GF_&lt;SectionName&gt;_&lt;KeyName&gt;
+</code></pre></div><p>Where the section name is the text within the brackets. Everything should be upper case, <code>.</code> should be replaced by <code>_</code>. For example, given these configuration settings:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># default section</span>
+<span class="nv">instance_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">HOSTNAME</span><span class="si">}</span>
+
+<span class="o">[</span>security<span class="o">]</span>
+<span class="nv">admin_user</span> <span class="o">=</span> admin
+
+<span class="o">[</span>auth.google<span class="o">]</span>
+<span class="nv">client_secret</span> <span class="o">=</span> 0ldS3cretKey
+</code></pre></div><p>Then you can override them using:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">GF_DEFAULT_INSTANCE_NAME</span><span class="o">=</span>my-instance
+<span class="nb">export</span> <span class="nv">GF_SECURITY_ADMIN_USER</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">export</span> <span class="nv">GF_AUTH_GOOGLE_CLIENT_SECRET</span><span class="o">=</span>newS3cretKey
+</code></pre></div>
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/green-ocean/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
