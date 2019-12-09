@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installation on Technical Documentation</title>
-    <link>https://jigyasa30.github.io/green-ocean/docs/installation/</link>
+    <link>https://goa2b.github.io/docs/installation/</link>
     <description>Recent content in Installation on Technical Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate>
     
-	<atom:link href="https://jigyasa30.github.io/green-ocean/docs/installation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://goa2b.github.io/docs/installation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Requirements</title>
-      <link>https://jigyasa30.github.io/green-ocean/docs/installation/requirements/</link>
+      <link>https://goa2b.github.io/docs/installation/requirements/</link>
       <pubDate>Fri, 29 Nov 2019 22:53:54 +0530</pubDate>
       
-      <guid>https://jigyasa30.github.io/green-ocean/docs/installation/requirements/</guid>
+      <guid>https://goa2b.github.io/docs/installation/requirements/</guid>
       <description>This page includes useful information on the supported Operating Systems as well as the hardware requirements that are needed to install and use Grafana.
 Supported operating systems The following operating systems are supported for Grafana installation:</description>
     </item>
     
     <item>
       <title>Features</title>
-      <link>https://jigyasa30.github.io/green-ocean/docs/installation/features/</link>
+      <link>https://goa2b.github.io/docs/installation/features/</link>
       <pubDate>Fri, 29 Nov 2019 22:50:46 +0530</pubDate>
       
-      <guid>https://jigyasa30.github.io/green-ocean/docs/installation/features/</guid>
+      <guid>https://goa2b.github.io/docs/installation/features/</guid>
       <description>Alert List Panel 
 The alert list panel allows you to display your dashboards alerts. The list can be configured to show current state or recent state changes. You can read more about alerts here.</description>
     </item>
